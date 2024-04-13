@@ -20,6 +20,34 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&display=swap"
     />
     <link rel="stylesheet" type="text/css" href="./Css/swiper.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var mySwiper = new Swiper('.swiper-container', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
+                // If we need pagination
+                autoplay: {
+                  delay: 2000, // Delay between slides in milliseconds (5 seconds)
+                  disableOnInteraction: false, // Allow manual navigation to override autoplay
+              },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                // And if we need scrollbar
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+            });
+        });
+    </script>
     <style>
       .svg-inline--fa {
         display: var(--fa-display, inline-block);
@@ -3153,34 +3181,7 @@
 
 <!-- Bootstrap JS -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<!-- Initialize Swiper -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var mySwiper = new Swiper('.swiper-container', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-            // If we need pagination
-            autoplay: {
-              delay: 2000, // Delay between slides in milliseconds (5 seconds)
-              disableOnInteraction: false, // Allow manual navigation to override autoplay
-          },
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            // And if we need scrollbar
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-        });
-    });
-</script>
+
 <!-- Script to show modal when Enquiry button is clicked -->
 <script>
     $(document).ready(function(){
